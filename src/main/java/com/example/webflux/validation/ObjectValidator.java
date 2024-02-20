@@ -1,9 +1,8 @@
 package com.example.webflux.validation;
 
-
 import com.example.webflux.exception.CustomException;
-import jakarta.validation.ConstraintViolation;
-import jakarta.validation.Validator;
+//import jakarta.validation.ConstraintViolation;
+//import jakarta.validation.Validator;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -19,7 +18,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class ObjectValidator {
 
-    private final Validator validator;
+/*    private final Validator validator;
 
     @SneakyThrows
     public <T> T validate (T object) {
@@ -30,5 +29,5 @@ public class ObjectValidator {
             String message = errors.stream().map(ConstraintViolation::getMessage).collect(Collectors.joining(", "));
             throw new CustomException(HttpStatus.BAD_REQUEST, message);
         }
-    }
+    }*/
 }

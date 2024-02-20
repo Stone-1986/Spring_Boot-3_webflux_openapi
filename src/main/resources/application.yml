@@ -1,0 +1,13 @@
+spring:
+  r2dbc:
+    url: "${r2dbc-url}"
+    username: "${r2dbc-username}"
+    password: "${r2dbc-password}"
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html

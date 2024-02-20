@@ -20,7 +20,9 @@ public class ProductHandler {
     private final ObjectValidator objectValidator;
 
     public Mono<ServerResponse> save(ServerRequest request) {
-        Mono<ProductDto> dtoMono = request.bodyToMono(ProductDto.class).doOnNext(objectValidator::validate);
+     //   Mono<ProductDto> dtoMono = request.bodyToMono(ProductDto.class).doOnNext(objectValidator::validate);
+        Mono<ProductDto> dtoMono = request.bodyToMono(ProductDto.class);
+
         return dtoMono.flatMap(productDto ->
                 ServerResponse.ok()
                         .contentType(MediaType.APPLICATION_JSON)
